@@ -24,13 +24,6 @@ This project aims to predict Google's stock prices using a Recurrent Neural Netw
 
 ## Getting Started
 
-### Prerequisites
-
-Ensure you have the following libraries installed:
-
-```bash
-pip install numpy pandas matplotlib keras scikit-learn
-
 ## Running the Code
 
 ### Data Preprocessing:
