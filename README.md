@@ -44,10 +44,9 @@ pip install numpy pandas matplotlib keras scikit-learn
 
 ### Prediction and Visualization:
 - Load the test dataset and predict the stock prices using the trained model.
-- Visualize the real vs. predicted stock prices.
+- Visualize the real vs predicted stock prices.
 
 ## File Descriptions
-- **rnn.py**: Contains the complete implementation of the RNN model, from data preprocessing to predictions.
 - **Google_Stock_Price_Train.csv**: Training dataset with historical stock prices.
 - **Google_Stock_Price_Test.csv**: Test dataset to evaluate the model's predictions.
 
