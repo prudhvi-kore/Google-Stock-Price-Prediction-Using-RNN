@@ -23,6 +23,14 @@ This project aims to predict Google's stock prices using a Recurrent Neural Netw
   - Visualize the results by comparing the real and predicted stock prices using Matplotlib.
 
 ## Getting Started
+## Prerequisites
+
+Ensure you have the following libraries installed:
+
+```
+pip install numpy pandas matplotlib keras scikit-learn
+
+```
 
 ## Running the Code
 
@@ -51,6 +59,3 @@ This project aims to predict Google's stock prices using a Recurrent Neural Netw
 - Experiment with different architectures and hyperparameters to improve prediction accuracy.
 - Explore other types of neural networks or machine learning models for stock price prediction.
 - Apply the model to other financial datasets.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
