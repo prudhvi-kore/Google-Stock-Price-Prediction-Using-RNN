@@ -1,12 +1,63 @@
-# RNN
-Predicting the Google Stock Price using LSTM
+# Google Stock Price Prediction Using Recurrent Neural Network (RNN)
 
-PS: Don't forget to upload the dataset (both Google_Stock_Price_Train.csv and Google_Stock_Price_Test.csv) into your Colab notebook by clicking the "Files" button on the left (the button looking like a folder) and then the "Upload" button. <br/> <br/>
+## Overview
 
-The RNN I built was a regressor. Indeed, I was dealing with Regression because I was trying to predict a continuous outcome (the Google Stock Price). For Regression, the way to evaluate the model performance is with a metric called RMSE (Root Mean Squared Error). It is calculated as the root of the mean of the squared differences between the predictions and the real values. <br/> <br/>
-However for the specific Stock Price Prediction problem, evaluating the model with the RMSE does not make much sense, since I am more interested in the directions taken by my predictions, rather than the closeness of their values to the real stock price. I want to check if my predictions follow the same directions as the real stock price and I don’t really care whether my predictions are close the real stock price. The predictions could indeed be close but often taking the opposite direction from the real stock price. <br/> <br/>
-Nevertheless if you are interested in the code that computes the RMSE for our Stock Price Prediction problem, please find it just below: <br/> <br/> <br/>
-     import math <br/>
-     from sklearn.metrics import mean_squared_error <br/>
-     rmse = math.sqrt(mean_squared_error(real_stock_price, predicted_stock_price)) <br/> <br/> <br/>
-Then consider dividing this RMSE by the range of the Google Stock Price values of January 2017 (that is around 800) to get a relative error, as opposed to an absolute error. It is more relevant since for example if you get an RMSE of 50, then this error would be very big if the stock price values ranged around 100, but it would be very small if the stock price values ranged around 10000. <br/>
+This project aims to predict Google's stock prices using a Recurrent Neural Network (RNN) built with LSTM (Long Short-Term Memory) layers. The model is trained on historical stock price data and attempts to forecast future prices, providing a visualization of both the real and predicted stock prices.
+
+## Project Structure
+
+- **Part 1 - Data Preprocessing:**
+  - Import libraries and dataset.
+  - Perform feature scaling using `MinMaxScaler`.
+  - Create a data structure with 60 timesteps and 1 output for training.
+  - Reshape the input data to be compatible with the LSTM model.
+
+- **Part 2 - Building the RNN:**
+  - Initialize the Sequential model.
+  - Add LSTM layers with Dropout regularization to prevent overfitting.
+  - Compile the model with the Adam optimizer and Mean Squared Error loss function.
+  - Fit the model to the training data.
+
+- **Part 3 - Making Predictions and Visualizing Results:**
+  - Use the trained model to predict stock prices on test data.
+  - Visualize the results by comparing the real and predicted stock prices using Matplotlib.
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have the following libraries installed:
+
+```bash
+pip install numpy pandas matplotlib keras scikit-learn
+
+## Running the Code
+
+### Data Preprocessing:
+- Load the training dataset and apply feature scaling.
+- Prepare the training set with the appropriate timesteps.
+
+### Model Training:
+- Build the RNN model using LSTM layers.
+- Train the model on the preprocessed data.
+
+### Prediction and Visualization:
+- Load the test dataset and predict the stock prices using the trained model.
+- Visualize the real vs. predicted stock prices.
+
+## File Descriptions
+- **rnn.py**: Contains the complete implementation of the RNN model, from data preprocessing to predictions.
+- **Google_Stock_Price_Train.csv**: Training dataset with historical stock prices.
+- **Google_Stock_Price_Test.csv**: Test dataset to evaluate the model's predictions.
+
+## Results
+- The model predicts Google's stock prices with a certain degree of accuracy, visualized in the form of a line plot comparing real and predicted values.
+- The red line represents the real stock prices, while the green line shows the predicted prices.
+
+## Future Work
+- Experiment with different architectures and hyperparameters to improve prediction accuracy.
+- Explore other types of neural networks or machine learning models for stock price prediction.
+- Apply the model to other financial datasets.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
