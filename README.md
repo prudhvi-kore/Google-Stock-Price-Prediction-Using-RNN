@@ -47,10 +47,10 @@ pip install numpy pandas matplotlib keras scikit-learn
 - Visualize the real vs predicted stock prices.
 
 ## File Descriptions
-- **RNN.ipynb**: Contains the complete implementation of the RNN model, from data preprocessing to prdictions.
 - **Google_Stock_Price_Train.csv**: Training dataset with historical stock prices.
 - **Google_Stock_Price_Test.csv**: Test dataset to evaluate the model's predictions.
-
+- **RNN.ipynb**: Contains the complete implementation of the RNN model, from data preprocessing to predictions.
+  
 ## Results
 - The model predicts Google's stock prices with a certain degree of accuracy, visualized in the form of a line plot comparing real and predicted values.
 - The red line represents the real stock prices, while the green line shows the predicted prices.
